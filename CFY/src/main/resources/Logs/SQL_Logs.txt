@@ -1,0 +1,14 @@
+==============================
+2019-10-13T17:55:00.692
+==============================
+Message: No suitable driver found for jdbc:postgresql://dblabs.it.teithe.gr:5432/it175058
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-10-13T17:55:05.295
+==============================
+Message: No suitable driver found for jdbc:postgresql://dblabs.it.teithe.gr:5432/it175058
+SQLState: 08001
+ErrorCode: 0
+==============================
