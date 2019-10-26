@@ -15,57 +15,67 @@ public class MainController {
     @FXML
     private Button reset_password, reset_username, delete_account, closeButton, help, profile, settings, add_product;
     
-
+    //Products
     @FXML
-    void Open_Mplouzes(ActionEvent event) {
-
+    void Open_Mplouzes(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Μπλούζες","Products");
     }
 
     @FXML
-    void Open_Pantelonia(ActionEvent event) {
-
+    void Open_Pantelonia(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Παντελόνια","Products");
     }
 
     @FXML
-    void Open_Pappotsia(ActionEvent event) {
-
+    void Open_Pappotsia(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Παππούτσια","Products");
     }
 
     @FXML
-    void Open_Eswrouxa(ActionEvent event) {
-
+    void Open_Eswrouxa(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Εσώρουχα","Products");
     }
 
     @FXML
-    void Open_Tsantes(ActionEvent event) {
-
+    void Open_Tsantes(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Τσάντες","Products");
     }
 
     @FXML
-    void Open_Kapela(ActionEvent event) {
-
+    void Open_Kapela(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Καπέλα","Products");
     }
 
     @FXML
-    void Open_Panoforia(ActionEvent event) {
-
+    void Open_Panoforia(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("πανωφόρια","Products");
     }
 
     @FXML
-    void Open_Foustes(ActionEvent event) {
-
+    void Open_Foustes(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Φούστες","Products");
     }
 
     @FXML
-    void Open_Foremata(ActionEvent event) {
-
+    void Open_Foremata(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Φορέματα","Products");
     }
 
     @FXML
-    void Open_Eksesouar(ActionEvent event) {
-
+    void Open_Eksesouar(ActionEvent event) throws Exception 
+    {
+        com.mycompany.cfy.InfoConnection.OpenProduct("Εξεσουάρ","Products");
     }
-
+    //End Products
     
     @FXML
     void Reset_Password(ActionEvent event) throws Exception 
@@ -95,7 +105,7 @@ public class MainController {
     @FXML
     void Open_Basket(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenWindow("Basket","OpenBasket",800,500);
+        com.mycompany.cfy.InfoConnection.OpenWindow("Basket","Basket",800,500);
     }
 
     @FXML

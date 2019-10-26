@@ -41,4 +41,24 @@ public class InfoConnection {
         stage.setScene(scene);   
         stage.show();  
     }
+    
+    public static void OpenProduct(String title, String fxml) throws Exception
+    {        
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(MainApp.class.getResource("/fxml/" + fxml + ".fxml"));       
+        stage.initStyle(StageStyle.TRANSPARENT);       
+        root.setOnMousePressed((MouseEvent event1) -> {
+            xOffset = event1.getSceneX();
+            yOffset = event1.getSceneY();
+        });  
+        root.setOnMouseDragged((MouseEvent event1) -> {
+            stage.setX(event1.getScreenX() - xOffset);
+            stage.setY(event1.getScreenY() - yOffset);
+        });       
+        stage.setTitle(title);
+        Scene scene = new Scene(root,800,500);
+        stage.setScene(scene);   
+        stage.show();  
+    }
+    
 }
