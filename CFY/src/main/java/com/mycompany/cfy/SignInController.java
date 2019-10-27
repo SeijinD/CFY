@@ -29,7 +29,7 @@ public class SignInController {
     private Label messageSignIn;
     
     @FXML
-    private Button createButton;
+    private Button createButton, closeButton;
     
     @FXML
     public void CreateAndGoLogin(ActionEvent event) throws Exception
@@ -51,7 +51,7 @@ public class SignInController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement = dbConnection.createStatement();
-                rs = statement.executeQuery("SELECT * FROM login WHERE username='" + user1 + "'");                
+                rs = statement.executeQuery("SELECT * FROM cfy_accounts WHERE username='" + user1 + "'");                
                 
             } catch(SQLException e)
             {
@@ -62,7 +62,7 @@ public class SignInController {
             {
                 try
                 {
-                    statement.executeUpdate("insert INTO LOGIN (username, password, type_user) VALUES ('" + user1 + "','" + pass1 + "','" + type_user1 + "')");                   
+                    statement.executeUpdate("insert INTO cfy_accounts (username, password, type_user) VALUES ('" + user1 + "','" + pass1 + "','" + type_user1 + "')");                   
                     statement.close();
                     dbConnection.close(); 
                     
@@ -83,9 +83,6 @@ public class SignInController {
             }
         }      
     }
-    
-    @FXML
-    private Button closeButton;
     
     @FXML
     public void Close(ActionEvent event)

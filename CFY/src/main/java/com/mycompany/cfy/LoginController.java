@@ -30,6 +30,7 @@ public class LoginController {
  
     static String userEdit = "";
     static String userType = "";
+    static String passEdit = "";
     
     @FXML
     public void Login(ActionEvent event) throws Exception
@@ -40,7 +41,7 @@ public class LoginController {
             statement    = dbConnection.createStatement();
             String user = userNameLogin.getText();
             String pass = passwordLogin.getText();
-            String selectString = "SELECT username, password, type_user FROM login WHERE username='" + user + "' and password='" + pass + "'";
+            String selectString = "SELECT username, password, type_user FROM cfy_accounts WHERE username='" + user + "' and password='" + pass + "'";
             rs = statement.executeQuery(selectString); 
             if(user.equals("") || pass.equals(""))
                 messageLogin.setText("Username or Password is empty!");
@@ -63,6 +64,7 @@ public class LoginController {
                 main.setScene(scene);          
                 main.show();
                 userEdit = user;
+                passEdit = pass;
                 if (type_user == 1)
                     userType = "Admin";
                 else

@@ -12,3 +12,102 @@ Message: No suitable driver found for jdbc:postgresql://dblabs.it.teithe.gr:5432
 SQLState: 08001
 ErrorCode: 0
 ==============================
+==============================
+2019-10-26T20:22:09.411
+==============================
+Message: ERROR: syntax error at or near "-"
+  Position: 46
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T20:22:15.029
+==============================
+Message: ERROR: syntax error at or near "-"
+  Position: 46
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T20:23:48.796
+==============================
+Message: ERROR: column "type_user" does not exist
+  Position: 28
+SQLState: 42703
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T20:24:23.803
+==============================
+Message: ERROR: column "type_user" does not exist
+  Position: 28
+SQLState: 42703
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T20:27:05.892
+==============================
+Message: ERROR: null value in column "user_id" violates not-null constraint
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T20:29:03.124
+==============================
+Message: ERROR: null value in column "user_id" violates not-null constraint
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T20:29:10.642
+==============================
+Message: ERROR: null value in column "user_id" violates not-null constraint
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T22:02:12.710
+==============================
+Message: ERROR: null value in column "user_id" violates not-null constraint
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T22:10:08.261
+==============================
+Message: ERROR: null value in column "user_id" violates not-null constraint
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T22:28:22.477
+==============================
+Message: ERROR: column "type_user" of relation "cfy_accounts" does not exist
+  Position: 47
+SQLState: 42703
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T23:54:32.481
+==============================
+Message: ERROR: schema "cfy" does not exist
+  Position: 22
+SQLState: 3F000
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T23:54:43.304
+==============================
+Message: ERROR: schema "cfy" does not exist
+  Position: 22
+SQLState: 3F000
+ErrorCode: 0
+==============================
+==============================
+2019-10-26T23:56:50.017
+==============================
+Message: ERROR: schema "cfy" does not exist
+  Position: 13
+SQLState: 3F000
+ErrorCode: 0
+==============================
