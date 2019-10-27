@@ -85,6 +85,9 @@
                         <String fx:value="Other" />
                     </FXCollections>
                 </items>
+                <value>
+                    <String fx:value="Male" />
+                </value>
             </ComboBox>
          </children>
       </Pane>

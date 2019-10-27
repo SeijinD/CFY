@@ -43,18 +43,19 @@ public class ProfileController {
       String s_email = change_email.getText();
       int s_age = Integer.parseInt(change_age.getText());
       int s_gender = 0;
-      if (change_gender.getValue().equals("Male"))
-      {
-          s_gender = 1;
-      }
-      else if (change_gender.getValue().equals("Female"))
-      {
-          s_gender = 2;
-      }
-      else
-      {
-          s_gender = 3;
-      }
+        switch (change_gender.getValue()) {
+            case "Male":
+                s_gender = 1;
+                break;
+            case "Female":
+                s_gender = 2;
+                break;
+            case "Other":
+                s_gender = 3;
+                break;
+            default:
+                break;
+        }
      
         try
         {
@@ -125,28 +126,41 @@ public class ProfileController {
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         } 
+        if (v_gender != null)
+        {
+            if (v_gender.equals("1"))
+            {
+                gender.setText("Male");           
+            }
+            else if (v_gender.equals("2"))
+            {
+                gender.setText("Female");
+            }
+            else
+            {
+                gender.setText("Other");
+            }
+        }
         
-        if (v_gender.equals("1"))
+        if (v_age != null)    
         {
-            gender.setText("Male");           
+            age.setText(v_age);
+            change_age.setText(v_age);
         }
-        else if (v_gender.equals("2"))
+        if (v_email != null)
         {
-            gender.setText("Female");
+            email.setText(v_email);
+            change_email.setText(v_email);
         }
-        else
+        if (v_name != null)
         {
-            gender.setText("Other");
+            name.setText(v_name);
+            change_name.setText(v_name);
         }
-                
-        age.setText(v_age);
-        email.setText(v_email);
-        name.setText(v_name);
-        surname.setText(v_surname);
-        
-        change_name.setText(v_name);
-        change_surname.setText(v_surname);
-        change_email.setText(v_email);
-        change_age.setText(v_age);
+        if (v_surname != null)
+        {
+            surname.setText(v_surname);
+            change_surname.setText(v_surname);
+        }   
     }  
 }

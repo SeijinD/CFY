@@ -111,3 +111,18 @@ Message: ERROR: schema "cfy" does not exist
 SQLState: 3F000
 ErrorCode: 0
 ==============================
+==============================
+2019-10-27T20:59:23.888
+==============================
+Message: ERROR: relation "products" does not exist
+  Position: 15
+SQLState: 42P01
+ErrorCode: 0
+==============================
+==============================
+2019-10-27T22:26:36.698
+==============================
+Message: ERROR: null value in column "product_id" violates not-null constraint
+SQLState: 23502
+ErrorCode: 0
+==============================

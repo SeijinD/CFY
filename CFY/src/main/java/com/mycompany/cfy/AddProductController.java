@@ -44,7 +44,7 @@ public class AddProductController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement = dbConnection.createStatement();
-                rs = statement.executeQuery("SELECT * FROM products WHERE name='" + name + 
+                rs = statement.executeQuery("SELECT * FROM cfy_products WHERE name='" + name + 
                                                           "' AND size='" + size +
                                                           "' AND price='" + price +
                                                           "' AND category='" + category +
@@ -61,7 +61,7 @@ public class AddProductController {
                 {
                     dbConnection = DriverManager.getConnection (url, username, passwd);
                     statement    = dbConnection.createStatement();
-                    statement.executeUpdate("insert INTO products (title,release_date,category,director,star) VALUES ('" + name +
+                    statement.executeUpdate("insert INTO cfy_products (name, size, price, category) VALUES ('" + name +
                                                                                                                  "','" + size + 
                                                                                                                  "','" + price + 
                                                                                                                  "','" + category + 

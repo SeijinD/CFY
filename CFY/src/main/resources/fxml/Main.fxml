@@ -75,52 +75,52 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="mplouzes" layoutX="14.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Mplouzes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Μπλούζες" textFill="WHITE">
+      <Button fx:id="mplouzes" layoutX="14.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Mplouzes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="T-Shirts" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="pantelonia" layoutX="14.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Pantelonia" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Παντελόνια" textFill="WHITE">
+      <Button fx:id="pantelonia" layoutX="14.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Pantelonia" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Pants" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="pappotsia" layoutX="168.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Pappotsia" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Παππούτσια" textFill="WHITE">
+      <Button fx:id="pappotsia" layoutX="168.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Pappotsia" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Shoes" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="eswrouxa" layoutX="325.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Eswrouxa" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Εσώρουχα" textFill="WHITE">
+      <Button fx:id="eswrouxa" layoutX="325.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Eswrouxa" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Underclothes" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="tsantes" layoutX="325.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Tsantes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Τσάντες" textFill="WHITE">
+      <Button fx:id="tsantes" layoutX="325.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Tsantes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Bags" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="kapela" layoutX="168.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Kapela" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Καπέλα" textFill="WHITE">
+      <Button fx:id="kapela" layoutX="168.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Kapela" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Hats" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="panoforia" layoutX="486.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Panoforia" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Πανωφόρια" textFill="WHITE">
+      <Button fx:id="panoforia" layoutX="486.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Panoforia" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Coats" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="foustes" layoutX="486.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Foustes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Φούστες" textFill="WHITE">
+      <Button fx:id="foustes" layoutX="486.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Foustes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Skirts" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="foremata" layoutX="646.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Foremata" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Φορέματα" textFill="WHITE">
+      <Button fx:id="foremata" layoutX="646.0" layoutY="317.0" mnemonicParsing="false" onAction="#Open_Foremata" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Dresses" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="eksesouar" layoutX="646.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Eksesouar" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Εξεσουάρ" textFill="WHITE">
+      <Button fx:id="eksesouar" layoutX="646.0" layoutY="357.0" mnemonicParsing="false" onAction="#Open_Eksesouar" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3268a8;" text="Accessories" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

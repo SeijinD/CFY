@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.collections.*?>
 
 <Pane fx:id="products_add" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #3299a8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.AddProductController">
    <children>
@@ -63,7 +64,25 @@
       <TextField fx:id="TextField_Name" layoutX="206.0" layoutY="173.0" prefHeight="25.0" prefWidth="257.0" />
       <TextField fx:id="TextField_Size" layoutX="206.0" layoutY="226.0" prefHeight="25.0" prefWidth="257.0" />
       <TextField fx:id="TextField_Price" layoutX="206.0" layoutY="283.0" prefHeight="25.0" prefWidth="257.0" />
-      <ComboBox fx:id="Category_to_add" layoutX="226.0" layoutY="340.0" prefWidth="150.0" />
+      <ComboBox fx:id="Category_to_add" layoutX="226.0" layoutY="340.0" prefWidth="150.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="T-Shirts" />
+                <String fx:value="Pants" />
+                <String fx:value="Hats" />
+                <String fx:value="Shoes" />
+                <String fx:value="Bags" />
+                <String fx:value="Underclothes" />
+                <String fx:value="Coats" />
+                <String fx:value="Skirts" />
+                <String fx:value="Dresses" />
+                <String fx:value="Accessories" />
+            </FXCollections>
+          </items>
+          <value>
+            <String fx:value="T-Shirts" />
+          </value>
+      </ComboBox>
       <Label fx:id="messageAddProduct" alignment="CENTER" layoutX="92.0" layoutY="453.0" prefHeight="25.0" prefWidth="418.0" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="12.0" />
