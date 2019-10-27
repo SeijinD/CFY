@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ResetPasswordController {
@@ -24,12 +23,12 @@ public class ResetPasswordController {
 
     @FXML
     private Button SaveResetPassword, closeButton;
-
+               
     @FXML
     void Save_Reset_Password(ActionEvent event)
-    {
+    {      
         if(passEdit.equals(oldPassword.getText()))
-        {
+        { 
             if (NewPassword.getText().equals(ConfirmPassword.getText()))
             {
                 String pass = NewPassword.getText();
