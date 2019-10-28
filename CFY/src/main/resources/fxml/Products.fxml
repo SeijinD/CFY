@@ -39,9 +39,8 @@
         <columns>
           <TableColumn fx:id="TableViewImage" prefWidth="217.0" text="Image" />
           <TableColumn fx:id="TableViewName" minWidth="0.0" prefWidth="189.0" text="Name" />
-            <TableColumn fx:id="TableViewSize" minWidth="0.0" prefWidth="87.0" text="Size" />
-            <TableColumn fx:id="TableViewPrice" minWidth="0.0" prefWidth="74.0" text="Price" />
-            <TableColumn fx:id="TableViewAdd" minWidth="0.0" prefWidth="61.0" text="Add" />
+            <TableColumn fx:id="TableViewSize" minWidth="0.0" prefWidth="130.0" text="Size" />
+            <TableColumn fx:id="TableViewPrice" minWidth="0.0" prefWidth="92.0" text="Price" />
         </columns>
       </TableView>
    </children>
