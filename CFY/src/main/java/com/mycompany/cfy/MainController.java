@@ -19,61 +19,61 @@ public class MainController {
     @FXML
     void Open_Mplouzes(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Μπλούζες","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("T-Shirts","Products","T-Shirts");
     }
 
     @FXML
     void Open_Pantelonia(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Παντελόνια","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Pants","Products","Pants");
     }
 
     @FXML
     void Open_Pappotsia(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Παππούτσια","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Shoes","Products","Shoes");
     }
 
     @FXML
     void Open_Eswrouxa(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Εσώρουχα","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Underclothes","Products","Underclothes");
     }
 
     @FXML
     void Open_Tsantes(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Τσάντες","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Bags","Products","Bags");
     }
 
     @FXML
     void Open_Kapela(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Καπέλα","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Hats","Products","Hats");
     }
 
     @FXML
     void Open_Panoforia(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("πανωφόρια","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Coats","Products","Coats");
     }
 
     @FXML
     void Open_Foustes(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Φούστες","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Skirts","Products","Skirts");
     }
 
     @FXML
     void Open_Foremata(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Φορέματα","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Dresses","Products","Dresses");
     }
 
     @FXML
     void Open_Eksesouar(ActionEvent event) throws Exception 
     {
-        com.mycompany.cfy.InfoConnection.OpenProduct("Εξεσουάρ","Products");
+        com.mycompany.cfy.InfoConnection.OpenProduct("Accessories","Products","Accessories");
     }
     //End Products
     

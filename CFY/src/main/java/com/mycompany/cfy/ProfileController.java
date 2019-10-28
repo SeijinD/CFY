@@ -2,6 +2,7 @@ package com.mycompany.cfy;
 
 import static com.mycompany.cfy.InfoConnection.*;
 import static com.mycompany.cfy.LoginController.userEdit;
+import static com.mycompany.cfy.LoginController.userType;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -18,7 +19,7 @@ import javafx.stage.Stage;
 public class ProfileController {
     
     @FXML
-    private Button closeButton, closeButton1, help, saveChanges, change_profile;
+    private Button closeButton, closeButton1, help, saveChanges, change_profile, open_logs;
     
      @FXML
     private ImageView image, change_image;
@@ -98,8 +99,19 @@ public class ProfileController {
         stage.close();
     }
     
+    @FXML
+    public void Open_Logs(ActionEvent event) throws Exception
+    {
+        com.mycompany.cfy.InfoConnection.OpenWindow("Logs","Logs",800,500);
+    }
+    
     public void initialize() 
     {
+        if(userType.equals("Admin"))
+        {
+            open_logs.setVisible(true);
+        }
+            
         String v_gender = "";
         String v_age = "";
         String v_email = "";

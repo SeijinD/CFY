@@ -23,6 +23,8 @@ public class InfoConnection {
     static double xOffset = 0;
     static double yOffset = 0;
     
+    static String categoryProduct = "";
+    
     public static void OpenWindow(String title, String fxml, int weight, int height) throws Exception
     {        
         Stage stage = new Stage();
@@ -42,8 +44,9 @@ public class InfoConnection {
         stage.show();  
     }
     
-    public static void OpenProduct(String title, String fxml) throws Exception
-    {        
+    public static void OpenProduct(String title, String fxml, String categoryP) throws Exception
+    {       
+        categoryProduct = categoryP;
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(MainApp.class.getResource("/fxml/" + fxml + ".fxml"));       
         stage.initStyle(StageStyle.TRANSPARENT);       

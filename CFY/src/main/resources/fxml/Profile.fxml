@@ -165,6 +165,11 @@
                   <Image url="@../images/profile.png" />
                </image>
             </ImageView>
+            <Button fx:id="open_logs" layoutX="697.0" layoutY="204.0" mnemonicParsing="false" onAction="#Open_Logs" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #3268a8;" text="Logs" textFill="#00fff6" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

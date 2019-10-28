@@ -3,6 +3,7 @@ package com.mycompany.cfy;
 import static com.mycompany.cfy.InfoConnection.*;
 import static com.mycompany.cfy.LoginController.userEdit;
 import com.mycompany.cfy.ProductsModel;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javafx.collections.FXCollections;
@@ -65,7 +66,7 @@ public class ProductsController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price FROM cfy_products");
+            rs = statement.executeQuery("SELECT name, size, price FROM cfy_products WHERE category='" + categoryProduct +"'");
             while(rs.next())
             {
                 listview.add(new ProductsModel(
