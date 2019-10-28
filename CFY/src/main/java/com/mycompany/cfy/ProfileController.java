@@ -128,17 +128,16 @@ public class ProfileController {
         } 
         if (v_gender != null)
         {
-            if (v_gender.equals("1"))
-            {
-                gender.setText("Male");           
-            }
-            else if (v_gender.equals("2"))
-            {
-                gender.setText("Female");
-            }
-            else
-            {
-                gender.setText("Other");
+            switch (v_gender) {
+                case "1":
+                    gender.setText("Male");
+                    break;
+                case "2":
+                    gender.setText("Female");
+                    break;
+                default:
+                    gender.setText("Other");
+                    break;
             }
         }
         

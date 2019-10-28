@@ -13,7 +13,16 @@ public class ProductsController {
     private Button help, closeButton, add_product;
 
     @FXML
-    private TableColumn<?, ?> TableViewAdd, TableViewSize, TableViewName, TableViewPrice, TableViewImage;
+    private TableColumn<?, ?> TableViewAdd;
+    
+    @FXML
+    private TableColumn<?, ?> TableViewPrice;
+    
+    @FXML
+    private TableColumn<?, ?> TableViewImage;
+    
+    @FXML
+    private TableColumn<?, ?> TableViewSize, TableViewName;
     
     @FXML
     private TableView<?> TableViewProducts;
@@ -35,5 +44,10 @@ public class ProductsController {
     {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
+    }
+    
+    public void initialize() 
+    {
+        
     }
 }
