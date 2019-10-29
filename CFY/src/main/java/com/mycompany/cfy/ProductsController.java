@@ -15,6 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class ProductsController {
@@ -26,7 +28,7 @@ public class ProductsController {
     private TableColumn<ProductsModel, Integer> TableViewPrice;
     
     @FXML
-    private TableColumn<?, ?> TableViewImage;
+    private TableColumn<ProductsModel, ImageView> TableViewImage;
     
     @FXML
     private TableColumn<ProductsModel, String> TableViewSize, TableViewName;
@@ -60,20 +62,26 @@ public class ProductsController {
        TableViewName.setCellValueFactory(new PropertyValueFactory<>("name"));
        TableViewSize.setCellValueFactory(new PropertyValueFactory<>("size")); 
        TableViewPrice.setCellValueFactory(new PropertyValueFactory<>("price")); 
+       TableViewImage.setCellValueFactory(new PropertyValueFactory<>("image"));
+             
+       ImageView imageView;
        
         try
         {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price FROM cfy_products WHERE category='" + categoryProduct +"'");
+            rs = statement.executeQuery("SELECT name, size, price, url_image FROM cfy_products WHERE category='" + categoryProduct +"'");
             while(rs.next())
             {
                 listview.add(new ProductsModel(
                         rs.getString("name"),
                         rs.getString("size"),
-                        rs.getInt("price")
+                        rs.getInt("price"),
+                        imageView = new ImageView(rs.getString("url_image"))
                 ));
+                imageView.setFitWidth(100);
+                imageView.setFitHeight(100);
             }
             statement.close();
             dbConnection.close();

@@ -4,6 +4,8 @@ import static com.mycompany.cfy.InfoConnection.*;
 import static com.mycompany.cfy.LoginController.userEdit;
 import static com.mycompany.cfy.LoginController.userType;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
@@ -12,17 +14,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class ProfileController {
     
     @FXML
-    private Button closeButton, closeButton1, help, saveChanges, change_profile, open_logs;
+    private Button closeButton, closeButton1, help, saveChanges, change_profile, open_logs,upload_image_profile;
     
-     @FXML
-    private ImageView image, change_image;
+    @FXML
+    private ImageView image;
 
     @FXML
     private TextField change_age, change_name, change_email, change_surname;
@@ -36,13 +40,32 @@ public class ProfileController {
     @FXML
     private Pane profile_view, profile_change;
     
+    String url_image = "";
+    
+    @FXML
+    void Upload_Image_Profile(ActionEvent event) throws FileNotFoundException
+    {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Upload Product Image");
+        File file = fileChooser.showOpenDialog(null);
+        
+        if (file != null) {
+            url_image = file.toURI().toString();
+        }
+    }  
+    
     @FXML
     void Save_Profile(ActionEvent event) 
     { 
       String s_name = change_name.getText();
       String s_surname = change_surname.getText();
       String s_email = change_email.getText();
-      int s_age = Integer.parseInt(change_age.getText());
+      int s_age = 0;
+      if (!change_age.getText().equals("") && !change_age.getText().equals(null))
+      {
+        s_age = Integer.parseInt(change_age.getText());
+      }
+      
       int s_gender = 0;
         switch (change_gender.getValue()) {
             case "Male":
@@ -66,7 +89,8 @@ public class ProfileController {
                                                         + "',surname='" + s_surname 
                                                         + "',gender='" + s_gender 
                                                         + "',age='" + s_age 
-                                                        + "',email='" + s_email 
+                                                        + "',email='" + s_email
+                                                        + "',url_image='" + url_image 
                                                         + "'  WHERE username='" + userEdit + "'");
             statement.close();
             dbConnection.close();
@@ -123,14 +147,15 @@ public class ProfileController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT gender, age, email, name, surname FROM cfy_accounts WHERE username='" + userEdit + "'");
+            rs = statement.executeQuery("SELECT gender, age, email, name, surname, url_image FROM cfy_accounts WHERE username='" + userEdit + "'");
             while(rs.next())
             {
                 v_gender = rs.getString("gender");
                 v_age = rs.getString("age");
                 v_email = rs.getString("email");
                 v_name =  rs.getString("name");
-                v_surname = rs.getString("surname");        
+                v_surname = rs.getString("surname");
+                url_image = rs.getString("url_image");
             }
             statement.close();
             dbConnection.close();
@@ -172,6 +197,10 @@ public class ProfileController {
         {
             surname.setText(v_surname);
             change_surname.setText(v_surname);
-        }   
+        } 
+        
+        Image img = new Image(url_image);
+        image.setImage(img);
+        
     }  
 }

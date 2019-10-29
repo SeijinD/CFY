@@ -1,6 +1,8 @@
 package com.mycompany.cfy;
 
 import static com.mycompany.cfy.InfoConnection.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class AddProductController {
@@ -28,7 +30,22 @@ public class AddProductController {
     private Label messageAddProduct;
     
     @FXML
-    private ImageView productImage;
+    private Button upload_image_product;
+     
+    String url_image = "";
+    
+    
+    @FXML
+    void Upload_Image_Product(ActionEvent event) throws FileNotFoundException
+    {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Upload Product Image");
+        File file = fileChooser.showOpenDialog(null);
+        
+        if (file != null) {
+            url_image = file.toURI().toString();
+        }
+    }  
 
     @FXML
     void Add_Product(ActionEvent event) throws Exception
@@ -38,7 +55,7 @@ public class AddProductController {
         String price = TextField_Price.getText();
         String category = Category_to_add.getValue();
         
-        if(name != null && size != null && price != null && category != null)
+        if(name != null && size != null && price != null && category != null && url_image != null)
         {
             try
             {
@@ -48,6 +65,7 @@ public class AddProductController {
                                                           "' AND size='" + size +
                                                           "' AND price='" + price +
                                                           "' AND category='" + category +
+                                                          "' AND url_image='" + url_image +
                                                           "'");                
                 
             } catch(SQLException e)
@@ -61,10 +79,11 @@ public class AddProductController {
                 {
                     dbConnection = DriverManager.getConnection (url, username, passwd);
                     statement    = dbConnection.createStatement();
-                    statement.executeUpdate("insert INTO cfy_products (name, size, price, category) VALUES ('" + name +
+                    statement.executeUpdate("insert INTO cfy_products (name, size, price, category, url_image) VALUES ('" + name +
                                                                                                                  "','" + size + 
                                                                                                                  "','" + price + 
-                                                                                                                 "','" + category + 
+                                                                                                                 "','" + category +
+                                                                                                                 "','" + url_image + 
                                                                                                                  "')");
                     messageAddProduct.setText("The Product added!");
                 

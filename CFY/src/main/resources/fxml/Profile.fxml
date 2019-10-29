@@ -72,11 +72,6 @@
             <TextField fx:id="change_surname" layoutX="410.0" layoutY="80.0" prefHeight="25.0" prefWidth="218.0" />
             <TextField fx:id="change_age" layoutX="410.0" layoutY="131.0" prefHeight="25.0" prefWidth="218.0" />
             <TextField fx:id="change_email" layoutX="410.0" layoutY="229.0" prefHeight="25.0" prefWidth="218.0" />
-            <ImageView fx:id="change_image" fitHeight="244.0" fitWidth="186.0" layoutX="48.0" layoutY="33.0">
-               <image>
-                  <Image url="@../images/profile.png" />
-               </image>
-            </ImageView>
             <ComboBox fx:id="change_gender" layoutX="410.0" layoutY="179.0" prefHeight="25.0" prefWidth="218.0">
                 <items>
                     <FXCollections fx:factory="observableArrayList">
@@ -89,6 +84,11 @@
                     <String fx:value="Male" />
                 </value>
             </ComboBox>
+            <Button fx:id="upload_image_profile" layoutX="81.0" layoutY="129.0" mnemonicParsing="false" onAction="#Upload_Image_Profile" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #3268a8;" text="Upload" textFill="#00fff6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Pane fx:id="profile_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="800.0" style="-fx-background-color: #3299a8;">
@@ -163,8 +163,7 @@
             <ImageView fx:id="image" fitHeight="244.0" fitWidth="186.0" layoutX="46.0" layoutY="33.0">
                <image>
                   <Image url="@../images/profile.png" />
-               </image>
-            </ImageView>
+               </image></ImageView>
             <Button fx:id="open_logs" layoutX="697.0" layoutY="204.0" mnemonicParsing="false" onAction="#Open_Logs" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #3268a8;" text="Logs" textFill="#00fff6" visible="false">
                <font>
                   <Font size="14.0" />

@@ -59,11 +59,7 @@
       </Button>
       <Button fx:id="profile" layoutX="314.0" layoutY="30.0" mnemonicParsing="false" onAction="#Profile" prefHeight="267.0" prefWidth="201.0" style="-fx-background-color: #3299a8;">
          <graphic>
-            <ImageView fitHeight="244.0" fitWidth="186.0">
-               <image>
-                  <Image url="@../images/profile.png" />
-               </image>
-            </ImageView>
+            <ImageView fx:id="imageProfile" fitHeight="244.0" fitWidth="186.0" />
          </graphic>
       </Button>
       <Button fx:id="help" layoutX="684.0" layoutY="2.0" mnemonicParsing="false" onAction="#Help" prefHeight="55.0" prefWidth="51.0" style="-fx-background-color: #3299a8;">

@@ -34,6 +34,7 @@ public class SignInController {
     @FXML
     public void CreateAndGoLogin(ActionEvent event) throws Exception
     {
+        String url_image = "file:/C:/GitHub/CFY/CFY/src/main/resources/images/profile.png";
         String user1 = userNameCreate.getText();
         String pass1 = passwordCreate.getText();
         int type_user1;
@@ -62,7 +63,11 @@ public class SignInController {
             {
                 try
                 {
-                    statement.executeUpdate("insert INTO cfy_accounts (username, password, type_user) VALUES ('" + user1 + "','" + pass1 + "','" + type_user1 + "')");                   
+                    statement.executeUpdate("insert INTO cfy_accounts (username, password, url_image, type_user) VALUES ('" 
+                                                                                        + user1 + "','" 
+                                                                                        + pass1 + "','" 
+                                                                                        + url_image + "','" 
+                                                                                        + type_user1 + "')");                   
                     statement.close();
                     dbConnection.close(); 
                     

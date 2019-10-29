@@ -1,15 +1,19 @@
 package com.mycompany.cfy;
 
+import javafx.scene.image.ImageView;
+
 public class ProductsModel {
     
     private String name, size;
     private int price;
+    private ImageView image;
     
-    public ProductsModel(String name, String size, int price)
+    public ProductsModel(String name, String size, int price, ImageView image)
     {
         this.name = name;
         this.size = size;
         this.price = price;
+        this.image = image;
     }
 
     public String getName() {
@@ -23,7 +27,15 @@ public class ProductsModel {
     public int getPrice() {
         return price;
     }
-
+    
+    public ImageView getImage() {
+        return image;
+    }
+    
+    public void setImage(ImageView image) {
+        this.image = image;
+    }
+    
     public void setName(String name) {
         this.name = name;
     }

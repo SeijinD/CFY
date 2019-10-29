@@ -88,6 +88,10 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <ImageView fx:id="product_image" fitHeight="72.0" fitWidth="118.0" layoutX="206.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="upload_image_product" layoutX="259.0" layoutY="110.0" mnemonicParsing="false" onAction="#Upload_Image_Product" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #3268a8;" text="Upload" textFill="#00fff6">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
