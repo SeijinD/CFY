@@ -1,15 +1,8 @@
 package com.mycompany.cfy;
 
-import static com.mycompany.cfy.InfoConnection.*;
-import static com.mycompany.cfy.LoginController.userEdit;
-
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class MainController {
@@ -142,28 +135,7 @@ public class MainController {
     }
     
      public void initialize() 
-    {
-        /*
-        String url_image = "";
-        try
-        {
-            dbConnection = DriverManager.getConnection (url, username, passwd);
-            statement    = dbConnection.createStatement();
+    {  
 
-            rs = statement.executeQuery("SELECT url_image FROM cfy_accounts WHERE username='" + userEdit + "'");
-            while(rs.next())
-            {
-                url_image = rs.getString("url_image");
-            }
-            statement.close();
-            dbConnection.close();
-        } catch(SQLException e)
-        {
-            com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
-        } 
-                
-        Image img = new Image(url_image);
-        imageProfile.setImage(img);
-        */
     }
 }

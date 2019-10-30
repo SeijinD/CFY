@@ -13,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -31,6 +33,7 @@ public class LoginController {
     static String userEdit = "";
     static String userType = "";
     static String passEdit = "";
+    static String url_image = "";
     
     @FXML
     public void Login(ActionEvent event) throws Exception
@@ -62,7 +65,7 @@ public class LoginController {
                 main.setTitle("Main");
                 Scene scene = new Scene(root,800,500);
                 main.setScene(scene);          
-                main.show();
+                main.show();                
                 userEdit = user;
                 passEdit = pass;
                 if (type_user == 1)
@@ -73,7 +76,32 @@ public class LoginController {
                 if(type_user == 1)
                 {
                     ((Button) scene.lookup("#add_product")).setVisible(true);
+                }   
+                //---------------------------------------------------------------------------------
+                try
+                {
+                    dbConnection = DriverManager.getConnection (url, username, passwd);
+                    statement    = dbConnection.createStatement();
+
+                    rs = statement.executeQuery("SELECT url_image FROM cfy_accounts WHERE username='" + userEdit + "'");
+                    while(rs.next())
+                    {
+                        url_image = rs.getString("url_image");
+                    }
+                    statement.close();
+                    dbConnection.close();
+                } catch(SQLException e)
+                {
+                    com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
                 }
+
+                if (!url_image.equals("") &&  url_image != null)
+                {
+                    Image img = new Image(url_image);
+                    ((ImageView) ((Button) scene.lookup("#profile")).lookup("#imageProfile")).setImage(img);                
+                }
+
+                //---------------------------------------------------------------------------------
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.close(); 
             }
