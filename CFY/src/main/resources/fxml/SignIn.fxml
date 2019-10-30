@@ -7,14 +7,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="signin_view" prefHeight="315.0" prefWidth="399.0" style="-fx-background-color: #3299a8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.SignInController">
+<AnchorPane id="AnchorPane" fx:id="signin_view" prefHeight="315.0" prefWidth="399.0" style="-fx-background-color: #3299a8; -fx-border-color: black; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.SignInController">
    <children>
       <Label alignment="CENTER" layoutX="59.0" layoutY="14.0" prefHeight="32.0" prefWidth="286.0" text="Create Account" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="356.0" layoutY="14.0" mnemonicParsing="false" onAction="#Close" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
+      <Button fx:id="closeButton" layoutX="345.0" layoutY="15.0" mnemonicParsing="false" onAction="#Close" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>

@@ -12,7 +12,7 @@ public class MainController {
     private Button mplouzes, eksesouar, pappotsia, foustes, eswrouxa, pantelonia, tsantes, foremata, panoforia, kapela;
 
     @FXML
-    private Button reset_password, reset_username, delete_account, closeButton, help, profile, settings, add_product;
+    private Button reset_password, reset_username, delete_account, closeButton, help, profile, settings, add_product, basket_product;
     
     @FXML
     private ImageView imageProfile;

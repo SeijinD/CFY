@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="main_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #3299a8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.MainController">
+<Pane fx:id="main_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #3299a8; -fx-border-color: black; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.MainController">
    <children>
       <Button fx:id="closeButton" layoutX="746.0" layoutY="14.0" mnemonicParsing="false" onAction="#Exit" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
          <font>
@@ -29,7 +29,7 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="basket" layoutX="709.0" layoutY="409.0" mnemonicParsing="false" onAction="#Open_Basket" prefHeight="78.0" prefWidth="75.0" style="-fx-background-color: #3299a8;">
+      <Button fx:id="basket_product" layoutX="709.0" layoutY="409.0" mnemonicParsing="false" onAction="#Open_Basket" prefHeight="78.0" prefWidth="75.0" style="-fx-background-color: #3299a8;">
          <graphic>
                 <ImageView fx:id="basket" fitHeight="69.0" fitWidth="59.0">
                     <image>
@@ -65,7 +65,7 @@
                </image></ImageView>
          </graphic>
       </Button>
-      <Button fx:id="help" layoutX="684.0" layoutY="2.0" mnemonicParsing="false" onAction="#Help" prefHeight="55.0" prefWidth="51.0" style="-fx-background-color: #3299a8;">
+      <Button fx:id="help" layoutX="684.0" layoutY="14.0" mnemonicParsing="false" onAction="#Help" prefHeight="55.0" prefWidth="51.0" style="-fx-background-color: #3299a8;">
          <graphic>
             <ImageView fx:id="helpButton" fitHeight="44.0" fitWidth="43.0">
                <image>

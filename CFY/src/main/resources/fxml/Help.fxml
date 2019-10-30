@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="products_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #3299a8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.HelpController">
+<Pane fx:id="products_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #3299a8; -fx-border-color: black; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.HelpController">
    <children>
       <Button fx:id="closeButton" layoutX="746.0" layoutY="14.0" mnemonicParsing="false" onAction="#Close" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
          <font>

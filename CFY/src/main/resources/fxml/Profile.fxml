@@ -91,7 +91,7 @@
             </Button>
          </children>
       </Pane>
-      <Pane fx:id="profile_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="800.0" style="-fx-background-color: #3299a8;">
+      <Pane fx:id="profile_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="800.0" style="-fx-background-color: #3299a8; -fx-border-color: black; -fx-border-width: 4;">
          <children>
             <Button fx:id="closeButton1" layoutX="746.0" layoutY="14.0" mnemonicParsing="false" onAction="#Close" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
                <font>
@@ -100,7 +100,7 @@
             </Button>
             <Line endX="700.0" layoutX="102.0" layoutY="308.0" startX="-100.0" stroke="#005e75" strokeWidth="3.0" />
             <Line endX="205.0" layoutX="241.0" layoutY="154.0" rotate="90.0" startX="-100.0" stroke="#005e75" strokeWidth="3.0" />
-            <Button fx:id="help" layoutX="684.0" layoutY="2.0" mnemonicParsing="false" onAction="#Help" prefHeight="55.0" prefWidth="51.0" style="-fx-background-color: #3299a8;">
+            <Button fx:id="help" layoutX="687.0" layoutY="9.0" mnemonicParsing="false" onAction="#Help" prefHeight="55.0" prefWidth="51.0" style="-fx-background-color: #3299a8;">
                <graphic>
                   <ImageView fx:id="helpButton1" fitHeight="44.0" fitWidth="43.0">
                      <image>

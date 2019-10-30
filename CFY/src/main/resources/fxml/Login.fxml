@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="login_view" prefHeight="260.0" prefWidth="399.0" style="-fx-background-color: #3299a8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.LoginController">
+<AnchorPane id="AnchorPane" fx:id="login_view" prefHeight="260.0" prefWidth="399.0" style="-fx-background-color: #3299a8; -fx-border-color: black; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cfy.LoginController">
    <children>
       <TextField fx:id="userNameLogin" layoutX="117.0" layoutY="41.0" prefHeight="25.0" prefWidth="237.0" />
       <Label fx:id="messageLogin" alignment="CENTER" layoutX="13.0" layoutY="221.0" prefHeight="25.0" prefWidth="376.0" textFill="WHITE">
@@ -25,7 +25,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="360.0" mnemonicParsing="false" onAction="#Exit" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
+      <Button fx:id="closeButton" layoutX="355.0" layoutY="11.0" mnemonicParsing="false" onAction="#Exit" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #3299a8;" text="X" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
