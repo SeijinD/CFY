@@ -76,6 +76,7 @@ public class LoginController {
                 if(type_user == 1)
                 {
                     ((Button) scene.lookup("#add_product")).setVisible(true);
+                    ((Button) scene.lookup("#remove_product")).setVisible(true);
                 }   
                 //---------------------------------------------------------------------------------
                 try

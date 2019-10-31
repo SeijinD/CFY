@@ -1,5 +1,9 @@
 package com.mycompany.cfy;
 
+import static com.mycompany.cfy.InfoConnection.*;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,6 +26,19 @@ public class ExitController {
     @FXML
     public void YesExit(ActionEvent event)
     {
+        try
+        {
+            dbConnection = DriverManager.getConnection (url, username, passwd);
+            statement    = dbConnection.createStatement();
+
+            statement.executeUpdate("DELETE FROM cfy_basket");
+
+            statement.close();
+            dbConnection.close();
+        } catch(SQLException e)
+        {
+            com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
+        } 
         System.exit(0);
     }
 }

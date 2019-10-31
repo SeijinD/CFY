@@ -12,7 +12,7 @@ public class MainController {
     private Button mplouzes, eksesouar, pappotsia, foustes, eswrouxa, pantelonia, tsantes, foremata, panoforia, kapela;
 
     @FXML
-    private Button reset_password, reset_username, delete_account, closeButton, help, profile, settings, add_product, basket_product;
+    private Button reset_password, reset_username, delete_account, closeButton, help, profile, settings, add_product, remove_product, basket_product;
     
     @FXML
     private ImageView imageProfile;
@@ -102,6 +102,12 @@ public class MainController {
     void Add_Product_Database(ActionEvent event) throws Exception 
     {
         com.mycompany.cfy.InfoConnection.OpenWindow("Add Product","AddProduct",600,500);
+    }
+    
+    @FXML
+    void Remove_Product_Database(ActionEvent event) throws Exception
+    {
+        com.mycompany.cfy.InfoConnection.OpenWindow("Remove Product","RemoveProduct",800,500);
     }
 
     @FXML

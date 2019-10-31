@@ -4,6 +4,8 @@ import static com.mycompany.cfy.InfoConnection.*;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,27 +21,41 @@ public class BasketController {
     private Button help,buy_products, remove_product,closeButton;
 
     @FXML
-    static TableColumn<ProductsModel, String> TableView2Size, TableView2Name;
+    private TableColumn<ProductsModel, String> TableView2Size, TableView2Name;
     
     @FXML
-    static TableColumn<ProductsModel, Integer> TableView2Price;
+    private TableColumn<ProductsModel, Integer> TableView2Price;
     
     @FXML
-    static TableColumn<ProductsModel, ImageView> TableView2Image;
+    private TableColumn<ProductsModel, ImageView> TableView2Image;
 
     @FXML
-    static TableView<ProductsModel> TableViewBasket;
+    private TableView<ProductsModel> TableViewBasket;
     
     @FXML
     void Remove_product(ActionEvent event) throws Exception
     {
+        ProductsModel productsModel = TableViewBasket.getSelectionModel().getSelectedItem();
+       
+        try
+        {
+            dbConnection = DriverManager.getConnection (url, username, passwd);
+            statement    = dbConnection.createStatement();
 
+            statement.executeUpdate("DELETE FROM cfy_basket WHERE name='"+ productsModel.getName() +"'");
+
+            statement.close();
+            dbConnection.close();
+        } catch(SQLException e)
+        {
+            com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
+        } 
     }
 
     @FXML
     void Buy_Products(ActionEvent event) throws Exception
     {
-
+        com.mycompany.cfy.InfoConnection.OpenWindow("Buy Products","Buy",500,400);
     }   
     
     @FXML
@@ -57,6 +73,8 @@ public class BasketController {
     
     public void initialize()
     {   
+        ObservableList<ProductsModel> listviewBasket = FXCollections.observableArrayList();
+        
        TableView2Name.setCellValueFactory(new PropertyValueFactory<>("name"));
        TableView2Size.setCellValueFactory(new PropertyValueFactory<>("size")); 
        TableView2Price.setCellValueFactory(new PropertyValueFactory<>("price")); 
@@ -69,7 +87,7 @@ public class BasketController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price, url_image FROM cfy_products WHERE category='" + categoryProduct +"'");
+            rs = statement.executeQuery("SELECT name, size, price, url_image FROM cfy_basket");
             while(rs.next())
             {
                 listviewBasket.add(new ProductsModel(
@@ -90,6 +108,6 @@ public class BasketController {
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         }         
-       TableViewProducts.setItems(listview);
+       TableViewBasket.setItems(listviewBasket);
     }
 }

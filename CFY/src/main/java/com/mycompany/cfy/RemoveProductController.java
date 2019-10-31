@@ -6,7 +6,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,10 +15,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ProductsController {
+public class RemoveProductController {
     
     @FXML
-    private Button help, closeButton, add_product;
+    private Button help, closeButton, remove_product;
     
     @FXML
     private TableColumn<ProductsModel, Integer> TableViewPrice;
@@ -32,33 +31,27 @@ public class ProductsController {
     
     @FXML
     private TableView<ProductsModel> TableViewProducts;
-
-    private ObservableList<ProductsModel> listviewBasket = FXCollections.observableArrayList();
     
     ObservableList<ProductsModel> listview = FXCollections.observableArrayList();
        
     @FXML
-    void Add_Product(ActionEvent event) 
+    void Remove_Product(ActionEvent event) 
     {
-        ProductsModel productsModel = TableViewProducts.getSelectionModel().getSelectedItem();
-        listviewBasket.add(productsModel);
-        
+       ProductsModel productsModel = TableViewProducts.getSelectionModel().getSelectedItem();
+       
         try
-            {
-                dbConnection = DriverManager.getConnection (url, username, passwd);
-                statement    = dbConnection.createStatement();
-                statement.executeUpdate("insert INTO cfy_basket (name, size, price, url_image) VALUES ('" + productsModel.getName() +
-                                                                                                             "','" + productsModel.getSize() + 
-                                                                                                             "','" + productsModel.getPrice() + 
-                                                                                                             "','" + productsModel.getPath() + 
-                                                                                                             "')");
-                statement.close();
-                dbConnection.close();
-            } 
-            catch(SQLException e)
-            {
-                com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
-            }     
+        {
+            dbConnection = DriverManager.getConnection (url, username, passwd);
+            statement    = dbConnection.createStatement();
+
+            statement.executeUpdate("DELETE FROM cfy_products WHERE name='"+ productsModel.getName() +"'");
+
+            statement.close();
+            dbConnection.close();
+        } catch(SQLException e)
+        {
+            com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
+        }  
     }   
     
     @FXML
@@ -88,7 +81,7 @@ public class ProductsController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price, url_image FROM cfy_products WHERE category='" + categoryProduct +"'");
+            rs = statement.executeQuery("SELECT name, size, price, url_image FROM cfy_products");
             while(rs.next())
             {
                 listview.add(new ProductsModel(

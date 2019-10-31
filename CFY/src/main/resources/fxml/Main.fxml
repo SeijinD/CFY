@@ -139,5 +139,10 @@
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font></Label>
+      <Button fx:id="remove_product" layoutX="250.0" layoutY="429.0" mnemonicParsing="false" onAction="#Remove_Product_Database" style="-fx-background-color: #3268a8;" text="Remove Product" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
