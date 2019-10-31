@@ -308,3 +308,45 @@ Message: No suitable driver found for file:/C:/GitHub/CFY/CFY/src/main/resources
 SQLState: 08001
 ErrorCode: 0
 ==============================
+==============================
+2019-10-31T08:26:18.292
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-10-31T08:26:28.332
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-10-31T08:26:41.103
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-10-31T08:28:49.152
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-10-31T08:30:32.263
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-10-31T08:30:46.318
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================

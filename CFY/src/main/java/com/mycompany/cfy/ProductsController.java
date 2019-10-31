@@ -1,8 +1,6 @@
 package com.mycompany.cfy;
 
 import static com.mycompany.cfy.InfoConnection.*;
-import static com.mycompany.cfy.LoginController.userEdit;
-import com.mycompany.cfy.ProductsModel;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -36,12 +33,17 @@ public class ProductsController {
     @FXML
     private TableView<ProductsModel> TableViewProducts;
 
-    ObservableList<ProductsModel> listview = FXCollections.observableArrayList();
+    static ObservableList<ProductsModel> listviewBasket = FXCollections.observableArrayList();
     
+    ObservableList<ProductsModel> listview = FXCollections.observableArrayList();
+       
     @FXML
     void Add_Product(ActionEvent event) 
     {
-
+        ProductsModel productsModel = TableViewProducts.getSelectionModel().getSelectedItem();
+        listviewBasket.add(productsModel);
+        System.out.println("Add " + productsModel.getName());
+        
     }   
     
     @FXML

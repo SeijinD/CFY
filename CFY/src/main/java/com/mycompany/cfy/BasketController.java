@@ -1,10 +1,13 @@
 package com.mycompany.cfy;
 
+import static com.mycompany.cfy.ProductsController.*;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class BasketController {
@@ -13,11 +16,17 @@ public class BasketController {
     private Button help,buy_products, remove_product,closeButton;
 
     @FXML
-    private TableColumn<?, ?> TableView2Remove, TableView2Image, TableView2Name, TableView2Price;
+    private TableColumn<ProductsModel, String> TableView2Size, TableView2Name;
+    
+    @FXML
+    private TableColumn<ProductsModel, Integer> TableView2Price;
+    
+    @FXML
+    private TableColumn<ProductsModel, ImageView> TableView2Image;
 
     @FXML
-    private TableView<?> TableViewBasket;
-
+    private TableView<ProductsModel> TableViewBasket;
+    
     @FXML
     void Remove_product(ActionEvent event) throws Exception
     {
@@ -41,5 +50,10 @@ public class BasketController {
     {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
+    }
+    
+    public void initialize()
+    {
+        TableViewBasket.setItems(listviewBasket);
     }
 }
