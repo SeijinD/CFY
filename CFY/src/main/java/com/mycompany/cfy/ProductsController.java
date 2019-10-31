@@ -1,6 +1,7 @@
 package com.mycompany.cfy;
 
 import static com.mycompany.cfy.InfoConnection.*;
+import static com.mycompany.cfy.BasketController.*;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -41,7 +42,11 @@ public class ProductsController {
     void Add_Product(ActionEvent event) 
     {
         ProductsModel productsModel = TableViewProducts.getSelectionModel().getSelectedItem();
-        listviewBasket.add(productsModel);
+        /*
+        listviewBasket.add(productsModel);   
+        
+        TableViewBasket.setItems(listviewBasket);
+        */
         System.out.println("Add " + productsModel.getName());
         
     }   

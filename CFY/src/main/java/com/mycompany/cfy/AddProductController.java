@@ -93,7 +93,10 @@ public class AddProductController {
                 catch(SQLException e)
                 {
                     com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
-                }  
+                }
+                TextField_Name.clear();
+                TextField_Size.clear();
+                TextField_Price.clear();
             }
             else
             {

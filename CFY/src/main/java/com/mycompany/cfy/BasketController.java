@@ -1,6 +1,5 @@
 package com.mycompany.cfy;
 
-import static com.mycompany.cfy.ProductsController.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,16 +15,16 @@ public class BasketController {
     private Button help,buy_products, remove_product,closeButton;
 
     @FXML
-    private TableColumn<ProductsModel, String> TableView2Size, TableView2Name;
+    static TableColumn<ProductsModel, String> TableView2Size, TableView2Name;
     
     @FXML
-    private TableColumn<ProductsModel, Integer> TableView2Price;
+    static TableColumn<ProductsModel, Integer> TableView2Price;
     
     @FXML
-    private TableColumn<ProductsModel, ImageView> TableView2Image;
+    static TableColumn<ProductsModel, ImageView> TableView2Image;
 
     @FXML
-    private TableView<ProductsModel> TableViewBasket;
+    static TableView<ProductsModel> TableViewBasket;
     
     @FXML
     void Remove_product(ActionEvent event) throws Exception
@@ -53,7 +52,7 @@ public class BasketController {
     }
     
     public void initialize()
-    {
-        TableViewBasket.setItems(listviewBasket);
+    {   
+       
     }
 }
