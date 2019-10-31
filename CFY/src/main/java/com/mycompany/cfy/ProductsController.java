@@ -42,13 +42,26 @@ public class ProductsController {
     void Add_Product(ActionEvent event) 
     {
         ProductsModel productsModel = TableViewProducts.getSelectionModel().getSelectedItem();
-        /*
-        listviewBasket.add(productsModel);   
+        listviewBasket.add(productsModel);
+        System.out.println("Add " + productsModel.getPath());
         
-        TableViewBasket.setItems(listviewBasket);
-        */
-        System.out.println("Add " + productsModel.getName());
-        
+        try
+            {
+                dbConnection = DriverManager.getConnection (url, username, passwd);
+                statement    = dbConnection.createStatement();
+                statement.executeUpdate("insert INTO cfy_basket (name, size, price, url_image) VALUES ('" + productsModel.getName() +
+                                                                                                             "','" + productsModel.getSize() + 
+                                                                                                             "','" + productsModel.getPrice() + 
+                                                                                                             "','" + productsModel.getPath() + 
+                                                                                                             "')");
+
+                statement.close();
+                dbConnection.close();
+            } 
+            catch(SQLException e)
+            {
+                com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
+            }     
     }   
     
     @FXML
@@ -85,10 +98,13 @@ public class ProductsController {
                         rs.getString("name"),
                         rs.getString("size"),
                         rs.getInt("price"),
-                        imageView = new ImageView(rs.getString("url_image"))
+                        imageView = new ImageView(rs.getString("url_image")),
+                        rs.getString("url_image")
                 ));
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);
+                
+                
             }
             statement.close();
             dbConnection.close();

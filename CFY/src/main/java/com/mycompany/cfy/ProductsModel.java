@@ -7,15 +7,25 @@ public class ProductsModel {
     private String name, size;
     private int price;
     private ImageView image;
+    private String path;
     
-    public ProductsModel(String name, String size, int price, ImageView image)
+    public ProductsModel(String name, String size, int price, ImageView image, String path)
     {
         this.name = name;
         this.size = size;
         this.price = price;
         this.image = image;
+        this.path = path;
     }
 
+    public String getPath() {
+        return path;
+    }
+    
+    public void setPath(String path) {
+        this.path = path;
+    }
+    
     public String getName() {
         return name;
     }
