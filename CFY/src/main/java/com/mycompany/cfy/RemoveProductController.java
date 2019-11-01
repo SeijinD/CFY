@@ -81,7 +81,7 @@ public class RemoveProductController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price, url_image FROM cfy_products");
+            rs = statement.executeQuery("SELECT name, size, price, url_image, product_id FROM cfy_products");
             while(rs.next())
             {
                 listview.add(new ProductsModel(
@@ -89,7 +89,8 @@ public class RemoveProductController {
                         rs.getString("size"),
                         rs.getInt("price"),
                         imageView = new ImageView(rs.getString("url_image")),
-                        rs.getString("url_image")
+                        rs.getString("url_image"),
+                        rs.getString("product_id")
                 ));
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);

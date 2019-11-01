@@ -8,16 +8,26 @@ public class ProductsModel {
     private int price;
     private ImageView image;
     private String path;
+    private String id;
     
-    public ProductsModel(String name, String size, int price, ImageView image, String path)
+    public ProductsModel(String name, String size, int price, ImageView image, String path, String id)
     {
         this.name = name;
         this.size = size;
         this.price = price;
         this.image = image;
         this.path = path;
+        this.id = id;
     }
 
+    public String getId() {
+        return id;
+    }
+    
+    public void setId(String path) {
+        this.id = id;
+    }
+    
     public String getPath() {
         return path;
     }
