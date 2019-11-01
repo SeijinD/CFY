@@ -1,6 +1,7 @@
 package com.mycompany.cfy;
 
 import static com.mycompany.cfy.InfoConnection.*;
+import static com.mycompany.cfy.ProductsController.price;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -44,6 +45,8 @@ public class BasketController {
 
             statement.executeUpdate("DELETE FROM cfy_basket WHERE product_id='"+ productsModel.getId() +"'");
 
+            price -= productsModel.getPrice();
+            
             statement.close();
             dbConnection.close();
         } catch(SQLException e)
