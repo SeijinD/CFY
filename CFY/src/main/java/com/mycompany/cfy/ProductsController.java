@@ -37,6 +37,8 @@ public class ProductsController {
     
     ObservableList<ProductsModel> listview = FXCollections.observableArrayList();
        
+    static int price = 0;
+    
     @FXML
     void Add_Product(ActionEvent event) 
     {
@@ -52,6 +54,7 @@ public class ProductsController {
                                                                                                              "','" + productsModel.getPrice() + 
                                                                                                              "','" + productsModel.getPath() + 
                                                                                                              "')");
+                price += productsModel.getPrice();
                 statement.close();
                 dbConnection.close();
             } 

@@ -14,5 +14,36 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
+      <Label fx:id="messageBuy" alignment="CENTER" layoutX="62.0" layoutY="361.0" prefHeight="25.0" prefWidth="376.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="68.0" layoutY="76.0" prefHeight="69.0" prefWidth="365.0" text="&quot;Buy all products in the basket&quot;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="finished_buy" layoutX="170.0" layoutY="311.0" mnemonicParsing="false" onAction="#Finished_Buy" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #3268a8;" text="Buy" textFill="#00fff6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER_RIGHT" layoutX="106.0" layoutY="265.0" prefHeight="20.0" prefWidth="217.0" text="Are you sure to want to Buy?" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="sureBox" layoutX="350.0" layoutY="267.0" mnemonicParsing="false" />
+      <Label alignment="CENTER" layoutX="179.0" layoutY="145.0" prefHeight="48.0" prefWidth="144.0" text="Total Price:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" alignment="CENTER" layoutX="179.0" layoutY="200.0" prefHeight="48.0" prefWidth="144.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

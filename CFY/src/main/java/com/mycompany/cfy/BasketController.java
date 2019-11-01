@@ -100,7 +100,6 @@ public class BasketController {
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);
                 
-                
             }
             statement.close();
             dbConnection.close();
