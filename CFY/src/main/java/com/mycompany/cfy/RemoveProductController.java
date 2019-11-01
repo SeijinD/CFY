@@ -35,7 +35,7 @@ public class RemoveProductController {
     ObservableList<ProductsModel> listview = FXCollections.observableArrayList();
        
     @FXML
-    void Remove_Product(ActionEvent event) 
+    void Remove_Product(ActionEvent event) throws Exception 
     {
        ProductsModel productsModel = TableViewProducts.getSelectionModel().getSelectedItem();
        
@@ -52,6 +52,10 @@ public class RemoveProductController {
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         }  
+        
+        Stage stage = (Stage) remove_product.getScene().getWindow();
+        stage.close();
+        com.mycompany.cfy.InfoConnection.OpenWindow("Remove Product","RemoveProduct",800,500);
     }   
     
     @FXML

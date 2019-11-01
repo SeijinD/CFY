@@ -52,7 +52,10 @@ public class BasketController {
         } catch(SQLException e)
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
-        } 
+        }
+        Stage stage = (Stage) remove_product.getScene().getWindow();
+        stage.close();
+        com.mycompany.cfy.InfoConnection.OpenWindow("Basket","Basket",800,500);
     }
 
     @FXML
