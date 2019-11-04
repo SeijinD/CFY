@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 public class RemoveProductController {
     
     @FXML
-    private Button help, closeButton, remove_product;
+    private Button help, closeButton, remove_product, refresh_product;
     
     @FXML
     private TableColumn<ProductsModel, Integer> TableViewPrice;
@@ -34,6 +34,13 @@ public class RemoveProductController {
     
     ObservableList<ProductsModel> listview = FXCollections.observableArrayList();
        
+    @FXML
+    void Refresh_Product(ActionEvent event)
+    {
+        TableViewProducts.getItems().clear();
+        this.initialize();
+    }
+    
     @FXML
     void Remove_Product(ActionEvent event) throws Exception 
     {
@@ -52,10 +59,6 @@ public class RemoveProductController {
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         }  
-        
-        Stage stage = (Stage) remove_product.getScene().getWindow();
-        stage.close();
-        com.mycompany.cfy.InfoConnection.OpenWindow("Remove Product","RemoveProduct",800,500);
     }   
     
     @FXML

@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 public class BasketController {
     
     @FXML
-    private Button help,buy_products, remove_product,closeButton;
+    private Button help,buy_products, remove_product,closeButton, refresh_basket;
 
     @FXML
     private TableColumn<ProductsModel, String> TableView2Size, TableView2Name;
@@ -32,6 +32,13 @@ public class BasketController {
 
     @FXML
     private TableView<ProductsModel> TableViewBasket;
+    
+    @FXML
+    void Refresh_Basket(ActionEvent event)
+    {
+        TableViewBasket.getItems().clear();
+        this.initialize();
+    }
     
     @FXML
     void Remove_product(ActionEvent event) throws Exception
@@ -53,9 +60,6 @@ public class BasketController {
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         }
-        Stage stage = (Stage) remove_product.getScene().getWindow();
-        stage.close();
-        com.mycompany.cfy.InfoConnection.OpenWindow("Basket","Basket",800,500);
     }
 
     @FXML
