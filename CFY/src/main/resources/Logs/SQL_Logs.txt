@@ -402,3 +402,10 @@ Message: No results were returned by the query.
 SQLState: 02000
 ErrorCode: 0
 ==============================
+==============================
+2019-11-09T00:04:07.744
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
