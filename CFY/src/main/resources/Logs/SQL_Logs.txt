@@ -403,9 +403,91 @@ SQLState: 02000
 ErrorCode: 0
 ==============================
 ==============================
-2019-11-09T00:04:07.744
+2019-11-07T11:19:25.572
 ==============================
 Message: The connection attempt failed.
 SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T11:19:41.341
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T11:21:26.653
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T11:22:23.362
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T11:22:37.240
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T11:26:59.875
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T11:27:14.001
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T12:19:36.132
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-07T12:19:51.569
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-11-08T16:53:04.922
+==============================
+Message: ERROR: null value in column "log_id" violates not-null constraint
+  Where: SQL statement "INSERT INTO cfy_user_logs (operation, oper_time, username, pass, type_user, name, surname, email)
+	VALUES ('U', now(), NEW.username, NEW.password, NEW.type_user, NEW.name, NEW.surname, NEW.email)"
+PL/pgSQL function "update_cfy_user_logs" line 8 at SQL statement
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-11-08T17:19:34.472
+==============================
+Message: ERROR: relation "cfy_user_logs" does not exist
+  Where: PL/pgSQL function "update_cfy_user_logs" line 8 at SQL statement
+SQLState: 42P01
+ErrorCode: 0
+==============================
+==============================
+2019-11-08T17:22:00.675
+==============================
+Message: ERROR: column "operation" of relation "cfy_user_logs" does not exist
+  Where: PL/pgSQL function "update_cfy_user_logs" line 8 at SQL statement
+SQLState: 42703
 ErrorCode: 0
 ==============================

@@ -31,7 +31,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="remove_product" layoutX="684.0" layoutY="366.0" mnemonicParsing="false" onAction="#Remove_product" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #3268a8;" text="Remove" textFill="#00fff6">
+      <Button fx:id="remove_product" layoutX="684.0" layoutY="366.0" mnemonicParsing="false" onAction="#Remove_product" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #3268a8;" text="Remove" textFill="#fb5f5f">
          <font>
             <Font size="18.0" />
          </font></Button>
@@ -44,6 +44,11 @@
         </columns>
       </TableView>
       <Button fx:id="buy_products" layoutX="684.0" layoutY="431.0" mnemonicParsing="false" onAction="#Buy_Products" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #3268a8;" text="Buy" textFill="#00ff37">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="refresh_basket" layoutX="686.0" layoutY="297.0" mnemonicParsing="false" onAction="#Refresh_Basket" prefHeight="39.0" prefWidth="93.0" style="-fx-background-color: #3268a8;" text="Refresh" textFill="#00fff6">
          <font>
             <Font size="18.0" />
          </font>
