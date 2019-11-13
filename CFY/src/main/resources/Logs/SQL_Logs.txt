@@ -566,3 +566,179 @@ PL/pgSQL function "update_cfy_user_logs" line 11 at SQL statement
 SQLState: 23502
 ErrorCode: 0
 ==============================
+==============================
+2019-11-13T20:25:38.183
+==============================
+Message: ERROR: function cfy_accounts_signin_chech(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 15
+SQLState: 42883
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:26:08.787
+==============================
+Message: ERROR: function cfy_accounts_signin_chech(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 15
+SQLState: 42883
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:26:35.866
+==============================
+Message: ERROR: function cfy_accounts_signin_chech(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 15
+SQLState: 42883
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:26:41.038
+==============================
+Message: ERROR: function cfy_accounts_signin_chech(unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 15
+SQLState: 42883
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:27:43.870
+==============================
+Message: ERROR: syntax error at or near "cfy_accounts_signin_add"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:29:05.322
+==============================
+Message: ERROR: syntax error at or near "cfy_accounts_signin_add"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:31:03.484
+==============================
+Message: ERROR: syntax error at or near "cfy_accounts_signin_add"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:31:51.496
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:33:25.436
+==============================
+Message: ERROR: syntax error at or near "CALL"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:35:04.491
+==============================
+Message: ERROR: syntax error at or near "CALL"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:37:21.735
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:57:39.876
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T20:59:22.090
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T21:19:13.935
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T21:19:14.316
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T21:19:46.088
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:04:52.915
+==============================
+Message: ERROR: syntax error at end of input
+  Position: 51
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:05:21.538
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:15:23.901
+==============================
+Message: ERROR: syntax error at end of input
+  Position: 51
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:15:37.956
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:16:53.280
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:25:21.795
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T01:25:43.802
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================

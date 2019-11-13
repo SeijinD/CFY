@@ -35,7 +35,7 @@ public class ResetUsernameController {
                 {
                     dbConnection = DriverManager.getConnection (url, username, passwd);
                     statement    = dbConnection.createStatement();
-                    statement.executeUpdate("UPDATE cfy_accounts SET username='" + user + "' WHERE username='" + userEdit + "'");
+                    statement.executeUpdate("SELECT cfy_accounts_reset_username('" + user + "','" + userEdit + "')");
                     statement.close();
                     dbConnection.close();
                 } catch(SQLException e)

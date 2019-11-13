@@ -44,13 +44,13 @@ public class LoginController {
             statement    = dbConnection.createStatement();
             String user = userNameLogin.getText();
             String pass = passwordLogin.getText();
-            String selectString = "SELECT username, password, type_user FROM cfy_accounts WHERE username='" + user + "' and password='" + pass + "'";
+            String selectString = "Select * from cfy_accounts_login_check('"+user+"','"+pass+"')";
             rs = statement.executeQuery(selectString); 
             if(user.equals("") || pass.equals(""))
                 messageLogin.setText("Username or Password is empty!");
             else if(rs.next())
             {
-                int type_user = Integer.parseInt(rs.getString("type_user"));
+                int type_user = Integer.parseInt(rs.getString("t"));
                 Stage main = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
                 main.initStyle(StageStyle.TRANSPARENT);       
@@ -84,10 +84,10 @@ public class LoginController {
                     dbConnection = DriverManager.getConnection (url, username, passwd);
                     statement    = dbConnection.createStatement();
 
-                    rs = statement.executeQuery("SELECT url_image FROM cfy_accounts WHERE username='" + userEdit + "'");
+                    rs = statement.executeQuery("SELECT * FROM cfy_accounts_login_url_image('" + userEdit + "')");
                     while(rs.next())
                     {
-                        url_image = rs.getString("url_image");
+                        url_image = rs.getString("cfy_accounts_login_url_image");
                     }
                     statement.close();
                     dbConnection.close();

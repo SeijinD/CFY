@@ -31,7 +31,7 @@ public class ExitController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            statement.executeUpdate("DELETE FROM cfy_basket");
+            statement.executeUpdate("SELECT delete_from_cfy_basket()");
 
             statement.close();
             dbConnection.close();

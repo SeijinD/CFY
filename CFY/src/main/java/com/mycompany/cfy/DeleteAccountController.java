@@ -33,7 +33,7 @@ public class DeleteAccountController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement    = dbConnection.createStatement();
-                statement.executeUpdate("DELETE FROM cfy_accounts WHERE username='" + userEdit + "'");
+                statement.executeUpdate("SELECT cfy_accounts_delete_account('" + userEdit + "')");
                 statement.close();
                 dbConnection.close();
             } 

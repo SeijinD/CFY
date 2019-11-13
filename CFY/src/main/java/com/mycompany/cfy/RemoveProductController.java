@@ -51,7 +51,7 @@ public class RemoveProductController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            statement.executeUpdate("DELETE FROM cfy_products WHERE name='"+ productsModel.getName() +"'");
+            statement.executeUpdate("Select * from removeproduct('"+ productsModel.getName() +"')");
 
             statement.close();
             dbConnection.close();

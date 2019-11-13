@@ -52,7 +52,7 @@ public class SignInController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement = dbConnection.createStatement();
-                rs = statement.executeQuery("SELECT * FROM cfy_accounts_signin('" + user1 + "')");                
+                rs = statement.executeQuery("SELECT * FROM cfy_accounts_signin_check('" + user1 + "')");                
                 
             } catch(SQLException e)
             {
@@ -64,12 +64,8 @@ public class SignInController {
             {
                 try
                 {
-                    statement.executeUpdate("insert INTO cfy_accounts (username, password, url_image, type_user) VALUES ('" 
-                                                                                        + user1 + "','" 
-                                                                                        + pass1 + "','" 
-                                                                                        + url_image + "','" 
-                                                                                        + type_user1 + "')");                   
-                    statement.close();
+                    statement.executeUpdate("SELECT cfy_accounts_signin_add('" + user1 + "','"+pass1+"','"+url_image+"',"+type_user1+")");
+
                     dbConnection.close(); 
                     
                     Stage stage = (Stage) createButton.getScene().getWindow();

@@ -36,7 +36,7 @@ public class ResetPasswordController {
                 {
                     dbConnection = DriverManager.getConnection (url, username, passwd);
                     statement    = dbConnection.createStatement();
-                    statement.executeUpdate("UPDATE cfy_accounts SET password='" + pass + "' WHERE username='" + userEdit + "'");
+                    statement.executeUpdate("SELECT cfy_accounts_reset_password('" + pass + "','" + userEdit + "')");
                     statement.close();
                     dbConnection.close();
                 } catch(SQLException e)
