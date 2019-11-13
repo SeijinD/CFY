@@ -15,29 +15,30 @@ public class LogsController {
     @FXML
     private Button closeButton;
     
-        private ListView logs_view; 
+    @FXML
+    private ListView logs_view; 
      
     public void initialize() throws Exception 
     { 
-        String selectString = "SELECT * FROM cfy_user_logs"; 
+        String selectString = "SELECT * FROM cfy_user_logs_f()";
          
         try 
         { 
-            dbConnection = DriverManager.getConnection (url, username, passwd); 
-            statement    = dbConnection.createStatement(); 
- 
-            rs = statement.executeQuery(selectString); 
+            dbConnection = DriverManager.getConnection (url, username, passwd);
+            statement    = dbConnection.createStatement();
+
+            rs = statement.executeQuery(selectString);
             while(rs.next()) 
             { 
-                String i = rs.getString("log_id"); 
-                String a = rs.getString("operation"); 
-                String ts = rs.getString("oper_time"); 
-                String u = rs.getString("username"); 
-                String p=  rs.getString("pass"); 
-                String t = rs.getString("type_user"); 
-                String n = rs.getString("name"); 
-                String s = rs.getString("surname"); 
-                String e = rs.getString("email"); 
+                String i = rs.getString("i"); 
+                String a = rs.getString("a"); 
+                String ts = rs.getString("ts"); 
+                String u = rs.getString("u"); 
+                String p=  rs.getString("p"); 
+                String t = rs.getString("t"); 
+                String n = rs.getString("n"); 
+                String s = rs.getString("s"); 
+                String e = rs.getString("e"); 
  
                 String User_Log = "Id: " + i  
                                     + " |Action: " + a  
