@@ -491,3 +491,26 @@ Message: ERROR: column "operation" of relation "cfy_user_logs" does not exist
 SQLState: 42703
 ErrorCode: 0
 ==============================
+==============================
+2019-11-12T21:07:50.949
+==============================
+Message: ERROR: relation "cfy_logs_user" does not exist
+  Where: PL/pgSQL function "cfy_user_logs_f" line 3 at RETURN QUERY
+SQLState: 42P01
+ErrorCode: 0
+==============================
+==============================
+2019-11-12T21:25:11.858
+==============================
+Message: ERROR: relation "cfy_user_logs_f" does not exist
+  Position: 15
+SQLState: 42P01
+ErrorCode: 0
+==============================
+==============================
+2019-11-12T23:41:56.531
+==============================
+Message: The column name i was not found in this ResultSet.
+SQLState: 42703
+ErrorCode: 0
+==============================
