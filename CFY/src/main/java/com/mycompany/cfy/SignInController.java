@@ -52,11 +52,12 @@ public class SignInController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement = dbConnection.createStatement();
-                rs = statement.executeQuery("SELECT * FROM cfy_accounts WHERE username='" + user1 + "'");                
+                rs = statement.executeQuery("SELECT * FROM cfy_accounts_signin('" + user1 + "')");                
                 
             } catch(SQLException e)
             {
-                com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
+                messageSignIn.setText("Username is already exist!");
+                com.mycompany.cfy.Handlers.sqlExceptionHandler(e);         
             } 
             
             if(rs.next() == false)

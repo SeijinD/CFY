@@ -514,3 +514,55 @@ Message: The column name i was not found in this ResultSet.
 SQLState: 42703
 ErrorCode: 0
 ==============================
+==============================
+2019-11-13T14:34:19.280
+==============================
+Message: ERROR: duplicate key value violates unique constraint "cfy_accounts_username_key"
+  Detail: Key (username)=(admin) already exists.
+SQLState: 23505
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T14:35:17.678
+==============================
+Message: ERROR: duplicate key value violates unique constraint "cfy_accounts_username_key"
+  Detail: Key (username)=(admin) already exists.
+SQLState: 23505
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T14:36:03.346
+==============================
+Message: ERROR: duplicate key value violates unique constraint "cfy_accounts_username_key"
+  Detail: Key (username)=(admin) already exists.
+SQLState: 23505
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T14:36:27.561
+==============================
+Message: ERROR: null value in column "name" violates not-null constraint
+  Where: SQL statement "INSERT INTO cfy_user_logs (operation, oper_time, username, pass, type_user, name, surname, email)
+	VALUES ('I', now(), NEW.username, NEW.password, NEW.type_user, NEW.name, NEW.surname, NEW.email)"
+PL/pgSQL function "update_cfy_user_logs" line 12 at SQL statement
+SQLState: 23502
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T14:39:53.041
+==============================
+Message: ERROR: duplicate key value violates unique constraint "cfy_accounts_username_key"
+  Detail: Key (username)=(user) already exists.
+SQLState: 23505
+ErrorCode: 0
+==============================
+==============================
+2019-11-13T14:44:51.662
+==============================
+Message: ERROR: null value in column "name" violates not-null constraint
+  Where: SQL statement "INSERT INTO cfy_user_logs (operation, oper_time, username, pass, type_user)
+	VALUES ('I', now(), NEW.username, NEW.password, NEW.type_user)"
+PL/pgSQL function "update_cfy_user_logs" line 11 at SQL statement
+SQLState: 23502
+ErrorCode: 0
+==============================
