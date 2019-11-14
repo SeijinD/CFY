@@ -50,7 +50,7 @@ public class BasketController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            statement.executeUpdate("DELETE FROM cfy_basket WHERE product_id='"+ productsModel.getId() +"'");
+            statement.executeUpdate("SELECT * FROM remove_product_from_basket("+productsModel.getId()+")");
 
             price -= productsModel.getPrice();
             
@@ -97,16 +97,16 @@ public class BasketController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price, url_image, product_id FROM cfy_basket");
+            rs = statement.executeQuery("SELECT * FROM cfy_basket_view_products()");
             while(rs.next())
             {
                 listviewBasket.add(new ProductsModel(
-                        rs.getString("name"),
-                        rs.getString("size"),
-                        rs.getInt("price"),
-                        imageView = new ImageView(rs.getString("url_image")),
-                        rs.getString("url_image"),
-                        rs.getString("product_id")
+                        rs.getString("n"),
+                        rs.getString("s"),
+                        rs.getInt("p"),
+                        imageView = new ImageView(rs.getString("u")),
+                        rs.getString("u"),
+                        rs.getString("pi")
                 ));
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);

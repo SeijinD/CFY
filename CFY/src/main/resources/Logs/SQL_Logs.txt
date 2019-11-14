@@ -809,3 +809,143 @@ Message: A result was returned when none was expected.
 SQLState: 0100E
 ErrorCode: 0
 ==============================
+==============================
+2019-11-14T17:47:31.727
+==============================
+Message: ERROR: syntax error at or near "cfy_add_product_to_basket"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:48:07.776
+==============================
+Message: ERROR: syntax error at or near "cfy_add_product_to_basket"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:48:28.428
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:49:45.294
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:50:06.115
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:55:55.267
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:56:45.809
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T17:57:03.885
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:02:18.716
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:03:19.080
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:20:16.581
+==============================
+Message: ERROR: syntax error at or near "cfy_products_add_check"
+  Position: 1
+SQLState: 42601
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:20:40.492
+==============================
+Message: An I/O error occurred while sending to the backend.
+SQLState: 08006
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:21:34.171
+==============================
+Message: ERROR: function cfy_products_add_check(unknown, unknown, integer, unknown, unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 15
+SQLState: 42883
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:21:45.626
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:25:49.979
+==============================
+Message: ERROR: function cfy_products_add_check(unknown, unknown, integer, unknown, unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 15
+SQLState: 42883
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:26:10.072
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:27:55.462
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:31:30.855
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-11-14T18:32:14.756
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================

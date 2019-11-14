@@ -61,12 +61,7 @@ public class AddProductController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement = dbConnection.createStatement();
-                rs = statement.executeQuery("SELECT * FROM cfy_products WHERE name='" + name + 
-                                                          "' AND size='" + size +
-                                                          "' AND price='" + price +
-                                                          "' AND category='" + category +
-                                                          "' AND url_image='" + url_image +
-                                                          "'");                
+                rs = statement.executeQuery("SELECT * FROM cfy_products_add_check('" + name +"','"+ size +"',"+ price +",'"+ category +"','"+ url_image +"')");            
                 
             } catch(SQLException e)
             {
@@ -79,12 +74,7 @@ public class AddProductController {
                 {
                     dbConnection = DriverManager.getConnection (url, username, passwd);
                     statement    = dbConnection.createStatement();
-                    statement.executeUpdate("insert INTO cfy_products (name, size, price, category, url_image) VALUES ('" + name +
-                                                                                                                 "','" + size + 
-                                                                                                                 "','" + price + 
-                                                                                                                 "','" + category +
-                                                                                                                 "','" + url_image + 
-                                                                                                                 "')");
+                    statement.executeUpdate("SELECT * FROM cfy_products_add('" + name +"','"+ size +"',"+ price +",'"+ category +"','"+ url_image +"')");    
                     messageAddProduct.setText("The Product added!");
                 
                     statement.close();

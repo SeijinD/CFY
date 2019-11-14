@@ -49,11 +49,8 @@ public class ProductsController {
             {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement    = dbConnection.createStatement();
-                statement.executeUpdate("insert INTO cfy_basket (name, size, price, url_image) VALUES ('" + productsModel.getName() +
-                                                                                                             "','" + productsModel.getSize() + 
-                                                                                                             "','" + productsModel.getPrice() + 
-                                                                                                             "','" + productsModel.getPath() + 
-                                                                                                             "')");
+                statement.executeUpdate("SELECT * FROM cfy_add_product_to_basket('"+productsModel.getName()+"','"+productsModel.getSize()+"',"+productsModel.getPrice()+",'"+productsModel.getPath()+"')");
+
                 price += productsModel.getPrice();
                 statement.close();
                 dbConnection.close();
@@ -91,16 +88,16 @@ public class ProductsController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price, url_image, product_id FROM cfy_products WHERE category='" + categoryProduct +"'");
+            rs = statement.executeQuery("SELECT * FROM cfy_products_view_by_category('"+ categoryProduct +"')");
             while(rs.next())
             {
                 listview.add(new ProductsModel(
-                        rs.getString("name"),
-                        rs.getString("size"),
-                        rs.getInt("price"),
-                        imageView = new ImageView(rs.getString("url_image")),
-                        rs.getString("url_image"),
-                        rs.getString("product_id")
+                        rs.getString("n"),
+                        rs.getString("s"),
+                        rs.getInt("p"),
+                        imageView = new ImageView(rs.getString("u")),
+                        rs.getString("u"),
+                        rs.getString("pi")
                 ));
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);
