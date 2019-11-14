@@ -85,13 +85,7 @@ public class ProfileController {
         {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
-            statement.executeUpdate("UPDATE cfy_accounts SET name='" + s_name 
-                                                        + "',surname='" + s_surname 
-                                                        + "',gender='" + s_gender 
-                                                        + "',age='" + s_age 
-                                                        + "',email='" + s_email
-                                                        + "',url_image='" + url_image 
-                                                        + "'  WHERE username='" + userEdit + "'");
+            statement.executeUpdate("SELECT * FROM cfy_profile_update('"+s_name+"','"+s_surname+"',"+s_gender+","+s_age+",'"+s_email+"','"+url_image+"','"+userEdit+"')");
             statement.close();
             dbConnection.close();
         } catch(SQLException e)
@@ -147,15 +141,15 @@ public class ProfileController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT gender, age, email, name, surname, url_image FROM cfy_accounts WHERE username='" + userEdit + "'");
+            rs = statement.executeQuery("SELECT * FROM cfy_profile_view('" + userEdit + "')");
             while(rs.next())
             {
-                v_gender = rs.getString("gender");
-                v_age = rs.getString("age");
-                v_email = rs.getString("email");
-                v_name =  rs.getString("name");
-                v_surname = rs.getString("surname");
-                url_image = rs.getString("url_image");
+                v_gender = rs.getString("g");
+                v_age = rs.getString("a");
+                v_email = rs.getString("e");
+                v_name =  rs.getString("n");
+                v_surname = rs.getString("s");
+                url_image = rs.getString("u");
             }
             statement.close();
             dbConnection.close();

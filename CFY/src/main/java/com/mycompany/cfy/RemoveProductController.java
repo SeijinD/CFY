@@ -51,7 +51,7 @@ public class RemoveProductController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            statement.executeUpdate("Select * from removeproduct('"+ productsModel.getName() +"')");
+            statement.executeUpdate("Select * from remove_product('"+ productsModel.getName() +"')");
 
             statement.close();
             dbConnection.close();
@@ -88,16 +88,16 @@ public class RemoveProductController {
             dbConnection = DriverManager.getConnection (url, username, passwd);
             statement    = dbConnection.createStatement();
 
-            rs = statement.executeQuery("SELECT name, size, price, url_image, product_id FROM cfy_products");
+            rs = statement.executeQuery("SELECT * FROM cfy_products_view()");
             while(rs.next())
             {
                 listview.add(new ProductsModel(
-                        rs.getString("name"),
-                        rs.getString("size"),
-                        rs.getInt("price"),
-                        imageView = new ImageView(rs.getString("url_image")),
-                        rs.getString("url_image"),
-                        rs.getString("product_id")
+                        rs.getString("n"),
+                        rs.getString("s"),
+                        rs.getInt("p"),
+                        imageView = new ImageView(rs.getString("u")),
+                        rs.getString("u"),
+                        rs.getString("pi")
                 ));
                 imageView.setFitWidth(100);
                 imageView.setFitHeight(100);
