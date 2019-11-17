@@ -2,5 +2,5 @@
 
 Store for Clothing.
 
-Project Maven with JavaFX + SQL.
+Project Maven with JavaFX + SQL(PostgreSQL).
 
