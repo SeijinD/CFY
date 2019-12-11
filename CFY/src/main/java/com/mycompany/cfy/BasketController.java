@@ -51,15 +51,14 @@ public class BasketController {
             statement    = dbConnection.createStatement();
 
             statement.executeUpdate("SELECT * FROM remove_product_from_basket("+productsModel.getId()+")");
-
-            price -= productsModel.getPrice();
-            
+       
             statement.close();
             dbConnection.close();
         } catch(SQLException e)
         {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         }
+        price -= productsModel.getPrice();
     }
 
     @FXML

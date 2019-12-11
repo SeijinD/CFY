@@ -949,3 +949,157 @@ Message: A result was returned when none was expected.
 SQLState: 0100E
 ErrorCode: 0
 ==============================
+==============================
+2019-12-11T12:44:34.607
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T12:45:38.309
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T12:45:40.229
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T12:45:48.645
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T12:46:40.212
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:20:15.469
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:20:24.884
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:20:38.948
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:26:46.834
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:26:54.043
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:26:55.308
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:27:11.185
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:27:53.007
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:28:01.414
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:30:08.058
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:30:20.722
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:30:27.181
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:30:35.905
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:31:18.447
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:31:18.903
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:31:23.757
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================
+==============================
+2019-12-11T14:31:29.571
+==============================
+Message: A result was returned when none was expected.
+SQLState: 0100E
+ErrorCode: 0
+==============================

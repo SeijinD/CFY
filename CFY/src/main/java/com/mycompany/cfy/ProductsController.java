@@ -50,15 +50,15 @@ public class ProductsController {
                 dbConnection = DriverManager.getConnection (url, username, passwd);
                 statement    = dbConnection.createStatement();
                 statement.executeUpdate("SELECT * FROM cfy_add_product_to_basket('"+productsModel.getName()+"','"+productsModel.getSize()+"',"+productsModel.getPrice()+",'"+productsModel.getPath()+"')");
-
-                price += productsModel.getPrice();
+             
                 statement.close();
                 dbConnection.close();
             } 
             catch(SQLException e)
             {
                 com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
-            }     
+            }
+        price += productsModel.getPrice();
     }   
     
     @FXML
