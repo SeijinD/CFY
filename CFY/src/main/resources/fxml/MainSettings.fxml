@@ -14,5 +14,10 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
+      <Label layoutX="172.0" layoutY="179.0" prefHeight="43.0" prefWidth="157.0" text="Coming Soon">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

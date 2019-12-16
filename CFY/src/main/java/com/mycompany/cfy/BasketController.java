@@ -34,13 +34,6 @@ public class BasketController {
     private TableView<ProductsModel> TableViewBasket;
     
     @FXML
-    void Refresh_Basket(ActionEvent event)
-    {
-        TableViewBasket.getItems().clear();
-        this.initialize();
-    }
-    
-    @FXML
     void Remove_product(ActionEvent event) throws Exception
     {
         ProductsModel productsModel = TableViewBasket.getSelectionModel().getSelectedItem();
@@ -59,6 +52,8 @@ public class BasketController {
             com.mycompany.cfy.Handlers.sqlExceptionHandler(e);
         }
         price -= productsModel.getPrice();
+        
+        this.initialize();
     }
 
     @FXML

@@ -1103,3 +1103,31 @@ Message: A result was returned when none was expected.
 SQLState: 0100E
 ErrorCode: 0
 ==============================
+==============================
+2019-12-12T10:07:38.801
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-12-12T10:11:55.482
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-12-12T10:12:14.803
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
+==============================
+2019-12-12T10:19:00.552
+==============================
+Message: The connection attempt failed.
+SQLState: 08001
+ErrorCode: 0
+==============================
